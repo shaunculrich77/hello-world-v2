@@ -1,0 +1,18 @@
+app:
+  container_name: app
+  restart: always
+  build: .
+  ports: ["8080:8080"]
+#links: -mongo mongo: container_name: mongo image: mongo expose: -"27017" volumes: -./data:/data/db ports: -"27017:27017"
+#this would create a link to another container to tie the two together
+
+#for full stack
+# version: "3"
+# services:
+#   app:
+#     container_name: app
+#     restart: always
+#     build: ./app
+#     ports: ["8080:8080"]
+#links: api <-- would liknk to a backend project
+#links: -mongo mongo: container_name: mongo image: mongo expose: -"27017" volumes: -./data:/data/db ports: -"27017:27017"
